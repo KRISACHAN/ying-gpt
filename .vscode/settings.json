@@ -1,0 +1,44 @@
+{
+    "eslint.run": "onType",
+    "eslint.options": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "eslint.useFlatConfig": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+    "editor.tabSize": 4,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js, ${capture}.d.ts",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts, ${capture}.css, ${capture}.scss, ${capture}.less, ${capture}.module.css, ${capture}.module.scss, ${capture}.module.less, ${capture}.test.tsx, ${capture}.test.ts, ${capture}.spec.tsx, ${capture}.spec.ts",
+        "package.json": "pnpm-lock.yaml, .npmrc, .gitignore, .eslintrc.*, .prettierrc.*, .stylelintrc.*, .commitlintrc.*, commitlint.config.js, .editorconfig, .cz-config.js, tsconfig.json, tsconfig.*.json, vite.config.*, postcss.config.*, tailwind.config.*, README.md, LICENSE",
+        "index.tsx": "index.css, index.scss, index.less, index.module.css, index.module.scss, index.module.less",
+        "vite.config.ts": "*.config.ts",
+        ".env": ".env.*, .env.*.local",
+        "README.md": "*.md"
+    },
+    "stylelint.enable": true,
+    "stylelint.validate": [
+        "css",
+        "scss",
+        "less",
+        "postcss",
+        "typescript",
+        "typescriptreact"
+    ]
+}
