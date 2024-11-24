@@ -16,6 +16,7 @@
         "prepare": "husky install",
         "lint-staged": "lint-staged",
         "commit": "git-cz",
+        "cz": "git add . && pnpm run commit && git push",
         "changeset": "changeset",
         "version": "changeset version",
         "release": "changeset publish",
