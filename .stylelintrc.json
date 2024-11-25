@@ -1,13 +1,23 @@
 {
-    "extends": [
-        "stylelint-config-standard",
-        "stylelint-config-recess-order",
-        "stylelint-config-css-modules",
-        "stylelint-config-prettier"
-    ],
+    "extends": ["stylelint-config-standard"],
     "plugins": ["stylelint-order"],
-    "customSyntax": "postcss-scss",
+    "overrides": [
+        {
+            "files": ["**/*.scss"],
+            "customSyntax": "postcss-scss"
+        },
+        {
+            "files": ["**/*.less"],
+            "customSyntax": "postcss-less"
+        }
+    ],
     "rules": {
+        "declaration-block-no-duplicate-properties": true,
+        "declaration-block-no-shorthand-property-overrides": true,
+        "block-no-empty": true,
+        "comment-no-empty": true,
+        "no-descending-specificity": null,
+        "no-invalid-position-at-import-rule": null,
         "at-rule-no-unknown": [
             true,
             {
@@ -23,7 +33,6 @@
         ],
         "no-empty-source": null,
         "selector-class-pattern": null,
-        "custom-property-pattern": null,
         "keyframes-name-pattern": null,
         "selector-pseudo-class-no-unknown": [
             true,
@@ -36,17 +45,7 @@
             {
                 "ignoreFunctions": ["theme"]
             }
-        ],
-        "property-no-vendor-prefix": null,
-        "value-no-vendor-prefix": null,
-        "declaration-empty-line-before": null,
-        "order/properties-order": []
+        ]
     },
-    "overrides": [
-        {
-            "files": ["**/*.{js,jsx,ts,tsx}"],
-            "customSyntax": "@stylelint/postcss-css-in-js"
-        }
-    ],
     "ignoreFiles": ["node_modules/**/*", "dist/**/*"]
 }
